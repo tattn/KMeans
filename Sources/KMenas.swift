@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol KMeansVector {
+public protocol KMeansElement {
     static var zeroValue: Self { get }
 
     static func + (left: Self, right: Self) -> Self
@@ -17,7 +17,7 @@ public protocol KMeansVector {
     func squareDistance(to: Self) -> Float
 }
 
-public struct KMeans<T: KMeansVector> {
+public struct KMeans<T: KMeansElement> {
     public static var defaultMaxIteration: Int { return 300 }
 
     public let numberOfCentroids: Int
