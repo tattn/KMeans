@@ -60,4 +60,3 @@ final class View: UIView {
 
 let view = View(frame: .init(x: 0, y: 0, width: 600, height: 600))
 
-
