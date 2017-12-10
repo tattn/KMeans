@@ -24,6 +24,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		244F63CE1FDD5EB400E3C372 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
 		249723B41FD859AD00A985DE /* KMeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KMeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		249723B71FD859AD00A985DE /* KMeans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMeans.h; sourceTree = "<group>"; };
 		249723B81FD859AD00A985DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,11 +54,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		244F63CD1FDD5E9B00E3C372 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				244F63CE1FDD5EB400E3C372 /* Base.xcconfig */,
+				244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
 		249723AA1FD859AD00A985DE = {
 			isa = PBXGroup;
 			children = (
-				249723B61FD859AD00A985DE /* KMeans */,
-				249723C11FD859AD00A985DE /* KMeansTests */,
+				244F63CD1FDD5E9B00E3C372 /* Configurations */,
+				249723B61FD859AD00A985DE /* Sources */,
+				249723C11FD859AD00A985DE /* Tests */,
 				249723B51FD859AD00A985DE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,23 +82,23 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		249723B61FD859AD00A985DE /* KMeans */ = {
+		249723B61FD859AD00A985DE /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				249723B71FD859AD00A985DE /* KMeans.h */,
 				249723B81FD859AD00A985DE /* Info.plist */,
 				249723CE1FD859E700A985DE /* KMenas.swift */,
 			);
-			path = KMeans;
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		249723C11FD859AD00A985DE /* KMeansTests */ = {
+		249723C11FD859AD00A985DE /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				249723C21FD859AD00A985DE /* KMeansTests.swift */,
 				249723C41FD859AD00A985DE /* Info.plist */,
 			);
-			path = KMeansTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +237,7 @@
 /* Begin XCBuildConfiguration section */
 		249723C61FD859AD00A985DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -272,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -285,6 +298,7 @@
 		};
 		249723C71FD859AD00A985DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -326,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -338,6 +352,7 @@
 		};
 		249723C91FD859AD00A985DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -346,7 +361,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = KMeans/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.KMeans;
@@ -360,6 +375,7 @@
 		};
 		249723CA1FD859AD00A985DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -368,7 +384,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = KMeans/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.KMeans;
@@ -381,10 +397,11 @@
 		};
 		249723CC1FD859AD00A985DE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KMeansTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.KMeansTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -395,10 +412,11 @@
 		};
 		249723CD1FD859AD00A985DE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = KMeansTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.tattn.KMeansTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

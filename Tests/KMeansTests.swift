@@ -45,7 +45,7 @@ class KMeansTests: XCTestCase {
         var random: Float { return Float(arc4random()) / Float(UINT32_MAX) }
         let vectors = (1...100).map { _ in Vector3(x: random, y: random, z: random) }
         self.measure {
-            let kMean = KMeans(elements: vectors, numberOfCentroids: 5, convergeDistance: 0.03)
+            let kMean = KMeans(elements: vectors, numberOfCentroids: 5, maxIteration: 300, convergeDistance: 0.001)
             print(kMean.centroids)
         }
     }

@@ -1,0 +1,17 @@
+//
+//  Base.xcconfig
+//  KMeans
+//
+//  Created by Tatsuya Tanaka on 20171210.
+//  Copyright © 2017年 tattn. All rights reserved.
+//
+
+SUPPORTED_PLATFORMS = macosx iphonesimulator iphoneos watchos watchsimulator appletvos appletvsimulator
+
+LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]           = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=iphoneos*]         = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=iphonesimulator*]  = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=watchos*]          = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=watchsimulator*]   = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=appletvos*]        = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+LD_RUNPATH_SEARCH_PATHS[sdk=appletvsimulator*] = $(inherited) '@executable_path/Frameworks' '@loader_path/Framework
