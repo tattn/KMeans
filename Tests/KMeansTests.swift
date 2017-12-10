@@ -42,7 +42,7 @@ class KMeansTests: XCTestCase {
     }
     
     func testPerformanceExample() {
-        var random: Float { return Float(arc4random()) / Float(UINT32_MAX) }
+        var random: Float { return Float(arc4random()) / Float(UInt32.max) }
         let vectors = (1...100).map { _ in Vector3(x: random, y: random, z: random) }
         self.measure {
             let kMean = KMeans(elements: vectors, numberOfCentroids: 5, maxIteration: 300, convergeDistance: 0.001)

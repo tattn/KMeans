@@ -29,7 +29,7 @@ extension Vector2: Equatable {
     }
 }
 
-var random: CGFloat { return CGFloat(arc4random()) / CGFloat(UINT32_MAX) }
+var random: CGFloat { return CGFloat(arc4random()) / CGFloat(UInt32.max) }
 let vectors = (1...100).map { _ in Vector2(x: random, y: random) }
 let kMeans = KMeans(elements: vectors, numberOfCentroids: 10, maxIteration: 300, convergeDistance: 0.001)
 

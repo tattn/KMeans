@@ -31,7 +31,7 @@ struct Vector3: KMeansElement {
     }
 }
 
-var random: Float { return Float(arc4random()) / Float(UINT32_MAX) }
+var random: Float { return Float(arc4random()) / Float(UInt32.max) }
 let vectors = (1...100).map { _ in Vector3(x: random, y: random, z: random) }
 
 let kMean = KMeans(elements: vectors,
