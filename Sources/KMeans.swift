@@ -24,7 +24,7 @@ public struct KMeans<T: KMeansElement> {
     public let maxIteration: Int
     public let convergeDistance: Float?
 
-    private(set) var centroids: [T]!
+    public private(set) var centroids: [T]!
 
     public init(elements: [T],
                 numberOfCentroids: Int,

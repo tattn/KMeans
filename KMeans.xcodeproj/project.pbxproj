@@ -26,6 +26,7 @@
 /* Begin PBXFileReference section */
 		244F63CE1FDD5EB400E3C372 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 		244F63CF1FDD5ED300E3C372 /* Framework.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Framework.xcconfig; sourceTree = "<group>"; };
+		244F63D01FDD714300E3C372 /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		249723B41FD859AD00A985DE /* KMeans.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KMeans.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		249723B71FD859AD00A985DE /* KMeans.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KMeans.h; sourceTree = "<group>"; };
 		249723B81FD859AD00A985DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		249723AA1FD859AD00A985DE = {
 			isa = PBXGroup;
 			children = (
+				244F63D01FDD714300E3C372 /* Playground.playground */,
 				244F63CD1FDD5E9B00E3C372 /* Configurations */,
 				249723B61FD859AD00A985DE /* Sources */,
 				249723C11FD859AD00A985DE /* Tests */,
