@@ -1,5 +1,5 @@
 //
-//  KMenas.swift
+//  KMeans.swift
 //  KMeans
 //
 //  Created by Tatsuya Tanaka on 20171207.

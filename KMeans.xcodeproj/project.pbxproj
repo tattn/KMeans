@@ -10,7 +10,7 @@
 		249723BE1FD859AD00A985DE /* KMeans.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 249723B41FD859AD00A985DE /* KMeans.framework */; };
 		249723C31FD859AD00A985DE /* KMeansTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249723C21FD859AD00A985DE /* KMeansTests.swift */; };
 		249723C51FD859AD00A985DE /* KMeans.h in Headers */ = {isa = PBXBuildFile; fileRef = 249723B71FD859AD00A985DE /* KMeans.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		249723CF1FD859E700A985DE /* KMenas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249723CE1FD859E700A985DE /* KMenas.swift */; };
+		249723CF1FD859E700A985DE /* KMeans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249723CE1FD859E700A985DE /* KMeans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 		249723BD1FD859AD00A985DE /* KMeansTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMeansTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		249723C21FD859AD00A985DE /* KMeansTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMeansTests.swift; sourceTree = "<group>"; };
 		249723C41FD859AD00A985DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		249723CE1FD859E700A985DE /* KMenas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMenas.swift; sourceTree = "<group>"; };
+		249723CE1FD859E700A985DE /* KMeans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMeans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,7 @@
 			children = (
 				249723B71FD859AD00A985DE /* KMeans.h */,
 				249723B81FD859AD00A985DE /* Info.plist */,
-				249723CE1FD859E700A985DE /* KMenas.swift */,
+				249723CE1FD859E700A985DE /* KMeans.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				249723CF1FD859E700A985DE /* KMenas.swift in Sources */,
+				249723CF1FD859E700A985DE /* KMeans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
