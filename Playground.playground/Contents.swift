@@ -37,26 +37,38 @@ final class View: UIView {
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
 
-        let colors: [Int: CGColor] = kMeans
+        let colors: [Int: UIColor] = kMeans
             .centroids
             .enumerated()
-            .reduce(into: [Int: CGColor](), { (result, item) in
-                result[item.offset] = UIColor(red: random, green: random, blue: random, alpha: 1.0).cgColor
+            .reduce(into: [Int: UIColor](), { (result, item) in
+                result[item.offset] = UIColor(red: random, green: random, blue: random, alpha: 1.0)
             })
 
         for vector in vectors {
             let centroid = kMeans.getCentroid(of: vector)
             let index = kMeans.centroids.index(of: centroid)!
-            context.setFillColor(colors[index]!)
+            context.setFillColor(colors[index]!.cgColor)
 
             let size: CGFloat = 4
             let x = vector.x * frame.width - size / 2
             let y = vector.y * frame.height - size / 2
 
-            context.fill(.init(x: x, y: y, width: size, height: size))
+            context.fillEllipse(in: .init(x: x, y: y, width: size, height: size))
+        }
+
+        for (index, centroid) in kMeans.centroids.enumerated() {
+            let label = "Centroid[\(index)]" as NSString
+
+            let font = UIFont.systemFont(ofSize: 16)
+            let attributes = [NSAttributedStringKey.font: font, NSAttributedStringKey.foregroundColor: colors[index]!]
+
+            let size = label.size(withAttributes: attributes)
+            let x = centroid.x * frame.width - size.width / 2
+            let y = centroid.y * frame.height - size.height / 2
+
+            label.draw(at: .init(x: x, y: y), withAttributes: attributes)
         }
     }
 }
 
 let view = View(frame: .init(x: 0, y: 0, width: 600, height: 600))
-

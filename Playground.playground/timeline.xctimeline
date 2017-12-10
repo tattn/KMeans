@@ -3,8 +3,26 @@
    version = "3.0">
    <TimelineItems>
       <LoggerValueHistoryTimelineItem
-         documentLocation = "file:///Users/tatstana/work/Swift/KMeans/Playground.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=1916&amp;EndingColumnNumber=9&amp;EndingLineNumber=60&amp;StartingColumnNumber=5&amp;StartingLineNumber=60&amp;Timestamp=534609421.754872"
+         documentLocation = "file:///Users/tatstana/work/Swift/KMeans/Playground.playground#CharacterRangeLen=6&amp;CharacterRangeLoc=2549&amp;EndingColumnNumber=63&amp;EndingLineNumber=73&amp;StartingColumnNumber=57&amp;StartingLineNumber=73&amp;Timestamp=534610843.371697"
          lockedSize = "{401, 390}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/tatstana/work/Swift/KMeans/Playground.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=2522&amp;EndingColumnNumber=34&amp;EndingLineNumber=73&amp;StartingColumnNumber=30&amp;StartingLineNumber=73&amp;Timestamp=534610843.371833"
+         lockedSize = "{215, 200}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/tatstana/work/Swift/KMeans/Playground.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=2493&amp;EndingColumnNumber=5&amp;EndingLineNumber=73&amp;StartingColumnNumber=1&amp;StartingLineNumber=73&amp;Timestamp=534610843.371945"
+         lockedSize = "{377, 357}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/tatstana/work/Swift/KMeans/Playground.playground#CharacterRangeLen=4&amp;CharacterRangeLoc=2497&amp;EndingColumnNumber=9&amp;EndingLineNumber=73&amp;StartingColumnNumber=5&amp;StartingLineNumber=73&amp;Timestamp=534610843.372069"
+         lockedSize = "{639, 488}"
          selectedRepresentationIndex = "0"
          shouldTrackSuperviewWidth = "NO">
       </LoggerValueHistoryTimelineItem>
