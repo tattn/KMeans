@@ -8,7 +8,7 @@ KMeans
 ```swift
 import KMeans
 
-struct Vector3: KMeansVector {
+struct Vector3: KMeansElement {
     let x, y, z: Float
 
     static var zeroValue: Vector3 { return .init(x: 0, y: 0, z: 0) }
