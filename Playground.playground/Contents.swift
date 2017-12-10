@@ -30,7 +30,7 @@ extension Vector2: Equatable {
 }
 
 var random: CGFloat { return CGFloat(arc4random()) / CGFloat(UINT32_MAX) }
-let vectors = (1...1000).map { _ in Vector2(x: random, y: random) }
+let vectors = (1...100).map { _ in Vector2(x: random, y: random) }
 let kMeans = KMeans(elements: vectors, numberOfCentroids: 10, maxIteration: 300, convergeDistance: 0.001)
 
 final class View: UIView {
@@ -45,7 +45,7 @@ final class View: UIView {
             })
 
         for vector in vectors {
-            let centroid = kMeans.getCentroid(of: vector)
+            let centroid = kMeans.findCentroid(of: vector)
             let index = kMeans.centroids.index(of: centroid)!
             context.setFillColor(colors[index]!.cgColor)
 

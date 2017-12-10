@@ -47,28 +47,29 @@ public struct KMeans<T: KMeansElement> {
         var centroids = elements.randomElements(numberOfCentroids)
 
         for _ in 0..<maxIteration {
-            var classification: [[T]] = .init(repeating: [], count: numberOfCentroids)
+            var predictions: [[T]] = .init(repeating: [], count: numberOfCentroids)
 
             // find k centroids
             for element in elements {
-                let classIndex = index(of: element, in: centroids)
-                classification[classIndex].append(element)
+                let index = self.index(of: element, in: centroids)
+                predictions[index].append(element)
             }
 
             // calculate the average of the centroids
-            let newCentroids: [T] = classification.map { elements in
-                let count = elements.count
+            var newCentroids: [T] = []
+            for prediction in predictions {
+                let count = prediction.count
                 if count > 0 {
-                    return elements.reduce(zero, +) / count
+                    newCentroids.append(prediction.reduce(zero, +) / count)
                 } else {
-                    return zero
+                    newCentroids.append(zero)
                 }
             }
 
             // calculate the distance from the last centroid position
             var centerMoveSquareDistance: Float = 0.0
-            for index in 0..<numberOfCentroids {
-                centerMoveSquareDistance += centroids[index].squareDistance(to: newCentroids[index])
+            for (index, centroid) in centroids.enumerated() {
+                centerMoveSquareDistance += centroid.squareDistance(to: newCentroids[index])
             }
 
             centroids = newCentroids
@@ -80,7 +81,7 @@ public struct KMeans<T: KMeansElement> {
         return centroids
     }
 
-    public func getCentroid(of element: T) -> T {
+    public func findCentroid(of element: T) -> T {
         let index = self.index(of: element, in: centroids)
         return centroids[index]
     }
